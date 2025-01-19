@@ -1,5 +1,9 @@
-package dev.ernandorezende.springgraphql;
+package dev.ernandorezende.springgraphql.controllers;
 
+import dev.ernandorezende.springgraphql.domain.Comment;
+import dev.ernandorezende.springgraphql.domain.Post;
+import dev.ernandorezende.springgraphql.services.CommentService;
+import dev.ernandorezende.springgraphql.services.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
@@ -12,10 +16,10 @@ import java.util.Collection;
 @Controller
 public class ForumController {
     @Autowired
-    PostService postService;
+    private PostService postService;
 
     @Autowired
-    CommentService commentService;
+    private CommentService commentService;
 
 //    @SchemaMapping(typeName = "Query", value = "getPost")
     @QueryMapping
