@@ -21,7 +21,11 @@ public class ForumController {
     @Autowired
     private CommentService commentService;
 
-//    @SchemaMapping(typeName = "Query", value = "getPost")
+    @QueryMapping
+    public Collection<Post> getAllPosts() {
+        return postService.getAllPosts();
+    }
+
     @QueryMapping
     public Post getPost(@Argument String id) {
         return postService.getPost(id);
