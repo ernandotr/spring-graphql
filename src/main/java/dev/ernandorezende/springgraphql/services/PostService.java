@@ -22,4 +22,8 @@ public class PostService {
     public Post getPost(String id) {
         return posts.get(id);
     }
+
+    public Collection<Post> getAllPosts() {
+        return posts.values();
+    }
 }

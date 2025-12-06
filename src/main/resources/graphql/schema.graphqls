@@ -12,6 +12,7 @@ type Comment {
 
 type Query {
     getPost(id: ID!) : Post
+    getAllPosts : [Post]
 }
 
 type Mutation {
